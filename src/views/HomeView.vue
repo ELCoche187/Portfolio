@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="w-full">
     <HeroSection />
     <ResumeSection />
-    <ProjectsSection />
+    <ProjectSection />
     <ContactSection />
     <PersonalSection />
     <FooterSection />
@@ -12,9 +12,10 @@
 <script setup>
 import HeroSection from '../components/HeroSection.vue'
 import ResumeSection from '../components/ResumeSection.vue'
-import ProjectsSection from '../components/ProjectsSection.vue'
+import ProjectSection from '@/components/ProjectSection.vue'
 import ContactSection from '../components/ContactSection.vue'
 import PersonalSection from '../components/PersonalSection.vue'
 import FooterSection from '../components/FooterSection.vue'
 </script>
 
+ls

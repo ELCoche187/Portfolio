@@ -7,7 +7,7 @@
         <!-- Hexagon image -->
         <div class="w-60 h-60 hexagon overflow-hidden border-4 border-indigo-500">
           <img
-            src="@/assets/images/your-image.jpg"
+            src="../assets/images/your-image.jpg"
             alt="Profile"
             class="object-cover w-full h-full"
           />

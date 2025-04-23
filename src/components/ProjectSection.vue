@@ -1,5 +1,5 @@
 <template>
-    <section class="relative w-full bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20 px-6 font-sarpanch overflow-hidden">
+    <section class="relative w-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20 px-6 font-sarpanch overflow-hidden">
       <!-- Hexagon cluster in corner -->
       <div class="absolute top-6 left-6 flex flex-col items-start space-y-1">
         <div class="w-4 h-4 bg-violet-600 rotate-45"></div>
