@@ -1,17 +1,20 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;600;700&display=swap');
 
+/* Tailwind core */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles if needed */
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  @apply max-w-screen-xl mx-auto p-8 font-normal;
 }
 
 a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  transition: 0.45s;
   padding: 3px;
 }
 
@@ -23,8 +26,7 @@ a,
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
+    @apply flex place-items-center;
   }
 
   #app {
