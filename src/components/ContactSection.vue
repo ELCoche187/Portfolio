@@ -1,50 +1,49 @@
+<script setup>
+import HexLogo from '@/assets/images/hex-three.png'
+</script>
+
 <template>
-    <section class="bg-gray-800 text-white py-20 px-8 font-sarpanch">
-      <div class="max-w-4xl mx-auto">
-        <!-- Top-left hex cluster -->
-        <div class="mb-8 flex items-start space-x-2">
-          <div class="flex flex-col items-start space-y-1 mt-1">
-            <div class="w-4 h-4 bg-violet-600 rotate-45"></div>
-            <div class="flex space-x-1">
-              <div class="w-4 h-4 bg-indigo-300 rotate-45"></div>
-              <div class="w-4 h-4 bg-white rotate-45"></div>
-            </div>
-          </div>
-          <h2 class="text-4xl font-bold">Contact</h2>
-        </div>
-  
-        <!-- Contact list -->
-        <ul class="space-y-4 text-lg">
-          <li class="flex items-center space-x-4">
-            <i class="fas fa-user text-xl"></i>
-            <span>Mika Edling</span>
-          </li>
-          <li class="flex items-center space-x-4">
-            <i class="fas fa-home text-xl"></i>
-            <span>Finsensgade 18, 1th</span>
-          </li>
-          <li class="flex items-center space-x-4">
-            <i class="fas fa-building text-xl"></i>
-            <span>Esbjerg 6700</span>
-          </li>
-          <li class="flex items-center space-x-4">
-            <i class="fas fa-phone text-xl"></i>
-            <span>+45 93 91 87 69</span>
-          </li>
-          <li class="flex items-center space-x-4">
-            <i class="fas fa-envelope text-xl"></i>
-            <span>mikaedling@gmail.com</span>
-          </li>
-          <li class="flex items-center space-x-4">
-            <i class="fab fa-linkedin text-xl"></i>
-            <span>
-              <a href="https://www.linkedin.com/in/miko-edling-825400280" target="_blank" class="hover:underline">
-                linkedin.com/in/miko-edling-825400280
-              </a>
-            </span>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </template>
-  
+  <section id="contact" class="relative w-7xl bg-[#2e2f33] text-white py-24 font-sarpanch">
+    <!-- Top-left logo -->
+    <img :src="HexLogo" alt="Logo Cluster" class="absolute top-6 left-6 z-20 w-12 h-12 object-contain" />
+
+    <div class="relative z-10 max-w-screen-md mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-3">Contact</h2>
+
+      <ul class="space-y-6 text-lg">
+        <li class="flex items-center gap-4">
+          <span class="text-xl">👤</span>
+          <span>Miko Edling</span>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="text-xl">🏠</span>
+          <span>Finsensgade 18, 1th</span>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="text-xl">🏢</span>
+          <span>Esbjerg 6700</span>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="text-xl">📞</span>
+          <span>+45 93 91 87 69</span>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="text-xl">✉️</span>
+          <span>mikoedling@gmail.com</span>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="text-xl">🔗</span>
+          <a href="https://linkedin.com/in/miko-edling-825400280" target="_blank" class="text-green-400 hover:underline">
+            linkedin.com/in/miko-edling-825400280
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+ul li span {
+  font-size: 1rem;
+}
+</style>

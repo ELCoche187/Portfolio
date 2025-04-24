@@ -1,46 +1,65 @@
 <template>
-    <section class="relative w-full bg-gray-800 text-white py-20 px-6 font-sarpanch overflow-hidden">
-      <!-- Top-left hexagon cluster -->
-      <div class="absolute top-6 left-6 flex flex-col items-start space-y-1">
-        <div class="w-4 h-4 bg-violet-600 rotate-45"></div>
-        <div class="flex space-x-1">
-          <div class="w-4 h-4 bg-white rotate-45"></div>
-          <div class="w-4 h-4 bg-white rotate-45"></div>
-        </div>
+  <section id="resume" class="relative w-full bg-[#2e2f33] text-white py-24 font-sarpanch overflow-hidden">
+    <!-- Top-left logo -->
+    <img :src="HexLogo" alt="Logo Cluster" class="absolute top-6 left-6 z-20 w-12 h-12 object-contain" />
+
+    <!-- Diagonal lines (right side) -->
+    <div class="absolute top-0 right-0 h-full w-24 flex flex-col justify-center gap-4 pr-8 z-0 opacity-70">
+      <div class="border-r-2 border-cyan-300 transform rotate-12 h-32"></div>
+      <div class="border-r-2 border-cyan-300 transform rotate-12 h-32"></div>
+      <div class="border-r-2 border-cyan-300 transform rotate-12 h-32"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-screen-lg mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-3">Resume</h2>
+      <p class="text-gray-300 mb-10">View my resume as either video or pdf.</p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+        <button @click="showVideo = true" class="resume-btn">
+          Video CV
+        </button>
+
+        <a
+          href="/resume.pdf"
+          download
+          class="resume-btn"
+        >
+          Regular CV
+        </a>
       </div>
-  
-      <!-- Right diagonal lines -->
-      <div class="absolute top-0 right-0 h-full w-20 flex flex-col justify-end items-end pr-2 pt-10 space-y-2">
-        <div class="border-r-2 border-cyan-400 h-full transform rotate-[30deg] origin-top-right"></div>
-        <div class="border-r-2 border-cyan-400 h-full transform rotate-[30deg] origin-top-right"></div>
-        <div class="border-r-2 border-cyan-400 h-full transform rotate-[30deg] origin-top-right"></div>
+    </div>
+
+    <!-- Video Modal -->
+    <div v-if="showVideo" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
+      <div class="w-full max-w-3xl bg-gray-900 p-4 rounded-lg shadow-xl relative">
+        <button @click="showVideo = false" class="absolute top-2 right-2 text-white text-2xl font-bold">&times;</button>
+        <iframe
+          class="w-full h-[400px] rounded-md"
+          :src="youtubeEmbedUrl"
+          title="Video CV"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
-  
-      <!-- Center content -->
-      <div class="relative z-10 max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Resume</h2>
-        <p class="text-gray-300 mb-8">View my resume as either video or pdf.</p>
-  
-        <div class="flex justify-center gap-6 flex-wrap">
-          <a
-            href="/videos/video-cv.mp4"
-            target="_blank"
-            class="bg-white text-black px-6 py-3 rounded-lg font-bold shadow-md hover:scale-105 transition"
-          >
-            Video CV
-          </a>
-          <a
-            href="/files/resume.pdf"
-            download
-            class="bg-white text-black px-6 py-3 rounded-lg font-bold shadow-md hover:scale-105 transition"
-          >
-            Regular CV
-          </a>
-        </div>
-      </div>
-    </section>
-  </template>
-  
-  <script setup>
-  // No script logic needed for this static section
-  </script>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import HexLogo from '@/assets/images/hex-one.png';
+
+const showVideo = ref(false)
+const youtubeEmbedUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ' 
+</script>
+
+<style scoped>
+.resume-btn {
+  @apply bg-white text-black font-bold px-6 py-3 rounded-lg shadow-md transition duration-200;
+}
+.resume-btn:hover {
+  @apply bg-gray-300;
+}
+</style>
