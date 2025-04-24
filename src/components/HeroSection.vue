@@ -1,10 +1,15 @@
+<script setup>
+  import heroBg from '@/assets/images/background.png'
+  import heroBg from '@/assets/images/transparent-gray.png'
+</script>
+
 <template>
   <section class="relative w-full min-h-screen font-sarpanch text-white overflow-hidden">
     <!-- Background Layer 1 -->
     <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('/portfolio/src/assets/images/background.png')"></div>
 
     <!-- Background Layer 2 (transparent overlay) -->
-    <div class="absolute inset-0 bg-cover bg-center z-10 opacity-70" style="background-image: url('/portfolio/src/assets/images/background.png')"></div>
+    <div class="absolute inset-0 bg-cover bg-center z-10 opacity-70" style="background-image: url(${heroBg})"></div>
 
 
     <!-- Main Content -->
