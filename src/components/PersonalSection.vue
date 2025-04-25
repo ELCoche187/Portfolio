@@ -57,5 +57,5 @@
 </template>
 
 <style scoped>
-/* Uses Tailwind for styling — clean and responsive */
+
 </style>

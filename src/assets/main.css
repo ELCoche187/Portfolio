@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;600;700&display=swap');
 
-/* Tailwind core */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles if needed */
 
 
 a,
