@@ -33,8 +33,8 @@ import HexLogo from '@/assets/images/hex-three.png'
         </li>
         <li class="flex items-center gap-4">
           <span class="text-xl">🔗</span>
-          <a href="https://linkedin.com/in/mika-edling-825400280" target="_blank" class="text-green-400 hover:underline">
-            linkedin.com/in/mika-edling-825400280
+          <a href="https://linkedin.com/in/mika-edling" target="_blank" class="text-green-400 hover:underline">
+            linkedin.com/in/mika-edling
           </a>
         </li>
       </ul>

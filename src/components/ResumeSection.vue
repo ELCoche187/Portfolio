@@ -51,7 +51,7 @@ import { ref } from 'vue'
 import HexLogo from '@/assets/images/hex-one.png';
 
 const showVideo = ref(false)
-const youtubeEmbedUrl = 'https://youtu.be/zpujjXk-zpw' 
+const youtubeEmbedUrl = 'https://www.youtube.com/embed/zpujjXk-zpw' 
 </script>
 
 <style scoped>

@@ -14,7 +14,7 @@
             Email
           </a>
           <a
-            href="https://www.linkedin.com/in/mika-edling-825400280"
+            href="https://www.linkedin.com/in/mika-edling"
             target="_blank"
             class="hover:underline text-gray-300"
           >

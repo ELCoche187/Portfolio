@@ -1,7 +1,7 @@
 
 
 <template>
-  <section class="relative w-full min-h-screen font-sarpanch text-white overflow-hidden">
+  <section id="HeroSection" class="relative w-full min-h-screen font-sarpanch text-white overflow-hidden">
     <div class="absolute inset-0  z-0 backgroundTrans"></div>
     <div class="absolute inset-0  z-0 backgroundHero"></div>
     
