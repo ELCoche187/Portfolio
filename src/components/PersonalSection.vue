@@ -4,10 +4,11 @@
 
 <template>
   <section id="personal" class="relative bg-[#2e2f33] text-white py-24 font-sarpanch overflow-hidden">
+    <div class="absolute inset-0  z-0 backgroundPerson"></div>
     <!-- Top-left logo -->
     <img :src="HexLogo" alt="Logo Cluster" class="absolute top-6 left-6 z-20 w-12 h-12 object-contain" />
 
-    <div class="relative z-10 max-w-4xl mx-auto bg-[#3a3b3f] bg-opacity-90 p-10 rounded-2xl shadow-lg">
+    <div class="relative z-10 max-w-4xl mx-auto bg-[#20222b] bg-opacity-90 p-10 rounded-2xl shadow-lg">
       <h2 class="text-4xl font-bold mb-8 text-center">Personal</h2>
 
       <div class="space-y-8 text-gray-200">

@@ -3,12 +3,11 @@
     <!-- Top-left logo -->
     <img :src="HexLogo" alt="Logo Cluster" class="absolute top-6 left-6 z-20 w-12 h-12 object-contain" />
 
-    <!-- Diagonal lines (right side) -->
-    <div class="absolute top-0 right-0 h-full w-24 flex flex-col justify-center gap-4 pr-8 z-0 opacity-70">
-      <div class="border-r-2 border-cyan-300 transform rotate-12 h-32"></div>
-      <div class="border-r-2 border-cyan-300 transform rotate-12 h-32"></div>
-      <div class="border-r-2 border-cyan-300 transform rotate-12 h-32"></div>
-    </div>
+    <img
+    src="@/assets/images/lines.png"
+    alt="Diagonal Lines"
+    class="absolute top-0 right-0 h-full w-auto object-contain z-0 opacity-70"
+    />
 
     <!-- Content -->
     <div class="relative z-10 max-w-screen-lg mx-auto px-6 text-center">
@@ -22,7 +21,7 @@
         </button>
 
         <a
-          href="/resume.pdf"
+          href="../assets/files/Mika-Resume.pdf"
           download
           class="resume-btn"
         >
@@ -52,7 +51,7 @@ import { ref } from 'vue'
 import HexLogo from '@/assets/images/hex-one.png';
 
 const showVideo = ref(false)
-const youtubeEmbedUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ' 
+const youtubeEmbedUrl = 'https://youtu.be/zpujjXk-zpw' 
 </script>
 
 <style scoped>

@@ -13,7 +13,7 @@
         <div
           v-for="(project, index) in projects"
           :key="index"
-          class="w-[180px] h-[200px] relative cursor-pointer group"
+          class="w-[240px] h-[260px] relative cursor-pointer group"
           @click="openProject(index)"
         >
           <div class="absolute inset-0 border-4 border-purple-500 hex-border z-10 group-hover:border-cyan-400 transition duration-200"></div>
@@ -42,34 +42,34 @@
 import { ref } from 'vue'
 import HexLogo from '@/assets/images/hex-two.png'
 
-// Replace these with your real content later
 const projects = ref([
   {
     title: 'Project A',
-    image: 'https://via.placeholder.com/200x200?text=A',
+    image: new URL('@/assets/images/Branding.png', import.meta.url).href,
     description: 'Description for Project A.',
   },
   {
     title: 'Project B',
-    image: 'https://via.placeholder.com/200x200?text=B',
+    image: new URL('@/assets/images/Citybranding.png', import.meta.url).href,
     description: 'Description for Project B.',
   },
   {
     title: 'Project C',
-    image: 'https://via.placeholder.com/200x200?text=C',
+    image: new URL('@/assets/images/Networkcoordinator.png', import.meta.url).href,
     description: 'Description for Project C.',
   },
   {
     title: 'Project D',
-    image: 'https://via.placeholder.com/200x200?text=D',
+    image: new URL('@/assets/images/Petitionwebsite.png', import.meta.url).href,
     description: 'Description for Project D.',
   },
   {
     title: 'Project E',
-    image: 'https://via.placeholder.com/200x200?text=E',
+    image: new URL('@/assets/images/UTTT.jpg', import.meta.url).href,
     description: 'Description for Project E.',
-  },
-])
+  }
+]);
+
 
 const activeProject = ref(null)
 

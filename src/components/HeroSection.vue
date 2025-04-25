@@ -1,16 +1,10 @@
-<script setup>
-  import heroBg from '@/assets/images/background.png'
-  import heroBg from '@/assets/images/transparent-gray.png'
-</script>
+
 
 <template>
   <section class="relative w-full min-h-screen font-sarpanch text-white overflow-hidden">
-    <!-- Background Layer 1 -->
-    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('/portfolio/src/assets/images/background.png')"></div>
-
-    <!-- Background Layer 2 (transparent overlay) -->
-    <div class="absolute inset-0 bg-cover bg-center z-10 opacity-70" style="background-image: url(${heroBg})"></div>
-
+    <div class="absolute inset-0  z-0 backgroundTrans"></div>
+    <div class="absolute inset-0  z-0 backgroundHero"></div>
+    
 
     <!-- Main Content -->
     <div class="relative z-30 max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 px-6 py-28">
@@ -18,7 +12,7 @@
       <div class="w-[260px] h-[300px] relative">
         <div class="absolute inset-0 border-4 border-blue-500 hex-border z-10"></div>
         <img
-          src="https://via.placeholder.com/260x300"
+          src="@/assets/images/profilepic.png"
           alt="Profile"
           class="w-full h-full object-cover hex-clip relative z-0"
         />
@@ -26,7 +20,7 @@
 
       <!-- Text & buttons -->
       <div class="text-left max-w-xl">
-        <h1 class="text-5xl font-bold mb-3">Miko Edling</h1>
+        <h1 class="text-5xl font-bold mb-3">Mika Edling</h1>
         <h2 class="text-2xl font-semibold mb-4">A bit about me</h2>
         <p class="text-white text-base leading-relaxed mb-6">
           I am a calm, grounded individual who enjoys spending time with friends and exploring new places. I have a

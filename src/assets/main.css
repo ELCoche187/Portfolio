@@ -22,3 +22,19 @@ a,
   }
 }
 
+.backgroundHero{
+  background-image: url('../assets/images/background.png');
+  opacity: 60%;
+}
+
+.backgroundTrans{
+  background-image: url('../assets/images/transparent-gray.png');
+  opacity: 50%;
+}
+
+.backgroundPerson {
+  background-image: url('../assets/images/background-personal.webp');
+  opacity: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
