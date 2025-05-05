@@ -4,7 +4,7 @@
     <img :src="HexLogo" alt="Logo Cluster" class="absolute top-6 left-6 z-20 w-12 h-12 object-contain" />
 
     <img
-    src="@/assets/images/lines.png"
+    src="../assets/images/lines.png"
     alt="Diagonal Lines"
     class="absolute top-0 right-0 h-full w-auto object-contain z-0 opacity-70"
     />
