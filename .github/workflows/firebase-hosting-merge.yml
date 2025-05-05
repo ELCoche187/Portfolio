@@ -13,21 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build the Vue app
-        run: npm run build
+    - name: Clean old build (if any)
+      run: rm -rf dist
 
-      - name: Check if build folder exists
-        run: ls -la dist
+    - name: Build the Vue app
+      run: npm run build
 
-      - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_2202A }}
-          channelId: live
-          projectId: portfolio-2202a
+    - name: Check if build folder exists
+      run: ls -la dist
+
+    - name: "Sanity check: show built index.html reference"
+      run: grep "script type=" dist/index.html || true
+
+    - name: Deploy to Firebase Hosting
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: ${{ secrets.GITHUB_TOKEN }}
+        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_2202A }}
+        channelId: live
+        projectId: portfolio-2202a
+
