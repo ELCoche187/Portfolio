@@ -21,7 +21,7 @@
         </button>
 
         <a
-          href="../assets/files/Mika-Resume.pdf"
+          href="/files/Mika-CV.pdf"
           download
           class="resume-btn"
         >
